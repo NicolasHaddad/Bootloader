@@ -1,0 +1,11 @@
+../Core/Src/i2c.c:44:6:MX_I2C1_Init	5
+../Core/Src/i2c.c:90:6:HAL_I2C_MspInit	3
+../Core/Src/i2c.c:136:6:HAL_I2C_MspDeInit	2
+../Core/Src/i2c.c:166:6:go2Boot	2
+../Core/Src/i2c.c:197:6:read_flash	3
+../Core/Src/i2c.c:219:6:process_data	1
+../Core/Src/i2c.c:230:6:HAL_I2C_ListenCpltCallback	1
+../Core/Src/i2c.c:243:6:HAL_I2C_AddrCallback	2
+../Core/Src/i2c.c:264:6:HAL_I2C_SlaveTxCpltCallback	1
+../Core/Src/i2c.c:277:6:HAL_I2C_SlaveRxCpltCallback	6
+../Core/Src/i2c.c:308:6:HAL_I2C_ErrorCallback	3

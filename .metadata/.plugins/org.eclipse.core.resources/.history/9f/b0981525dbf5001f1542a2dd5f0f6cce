@@ -1,0 +1,325 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    i2c.c
+  * @brief   This file provides code for the configuration
+  *          of the I2C instances.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "i2c.h"
+
+/* USER CODE BEGIN 0 */
+#include "main.h"
+uint8_t RxData[RxSIZE];
+uint8_t rxcount = 0;
+uint8_t txcount = 0, dataReg = 0;
+uint8_t incoming;
+uint8_t current_bank= 0xFF, current_page = 0xFF, current_register = 0xFF;
+uint16_t chunck_counter = 0;
+uint16_t chunck_size = 0;
+uint8_t chunck_size_flag = 0;
+
+#define FLASH_BOOT 	  0x8000000
+#define FLASH_REAL 	  0x8010000
+#define FLASH_STORAGE 0x8100000
+#define page_size 0x2000
+
+/* USER CODE END 0 */
+
+I2C_HandleTypeDef hi2c1;
+
+/* I2C1 init function */
+void MX_I2C1_Init(void)
+{
+
+  /* USER CODE BEGIN I2C1_Init 0 */
+
+  /* USER CODE END I2C1_Init 0 */
+
+  /* USER CODE BEGIN I2C1_Init 1 */
+
+  /* USER CODE END I2C1_Init 1 */
+  hi2c1.Instance = I2C1;
+  hi2c1.Init.Timing = 0x30909DEC;
+  hi2c1.Init.OwnAddress1 = 160;
+  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+  hi2c1.Init.OwnAddress2 = 0;
+  hi2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
+  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Analogue filter
+  */
+  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure Digital filter
+  */
+  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN I2C1_Init 2 */
+  if (HAL_I2C_EnableListen_IT(&hi2c1) != HAL_OK)
+  {
+  	Error_Handler();
+  }
+  /* USER CODE END I2C1_Init 2 */
+
+}
+
+void HAL_I2C_MspInit(I2C_HandleTypeDef* i2cHandle)
+{
+
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
+  if(i2cHandle->Instance==I2C1)
+  {
+  /* USER CODE BEGIN I2C1_MspInit 0 */
+
+  /* USER CODE END I2C1_MspInit 0 */
+
+  /** Initializes the peripherals clock
+  */
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_I2C1;
+    PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+    /**I2C1 GPIO Configuration
+    PB6     ------> I2C1_SCL
+    PB7     ------> I2C1_SDA
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF4_I2C1;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    /* I2C1 clock enable */
+    __HAL_RCC_I2C1_CLK_ENABLE();
+
+    /* I2C1 interrupt Init */
+    HAL_NVIC_SetPriority(I2C1_EV_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(I2C1_EV_IRQn);
+    HAL_NVIC_SetPriority(I2C1_ER_IRQn, 5, 0);
+    HAL_NVIC_EnableIRQ(I2C1_ER_IRQn);
+  /* USER CODE BEGIN I2C1_MspInit 1 */
+
+  /* USER CODE END I2C1_MspInit 1 */
+  }
+}
+
+void HAL_I2C_MspDeInit(I2C_HandleTypeDef* i2cHandle)
+{
+
+  if(i2cHandle->Instance==I2C1)
+  {
+  /* USER CODE BEGIN I2C1_MspDeInit 0 */
+
+  /* USER CODE END I2C1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_I2C1_CLK_DISABLE();
+
+    /**I2C1 GPIO Configuration
+    PB6     ------> I2C1_SCL
+    PB7     ------> I2C1_SDA
+    */
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_6);
+
+    HAL_GPIO_DeInit(GPIOB, GPIO_PIN_7);
+
+    /* I2C1 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(I2C1_EV_IRQn);
+    HAL_NVIC_DisableIRQ(I2C1_ER_IRQn);
+  /* USER CODE BEGIN I2C1_MspDeInit 1 */
+
+  /* USER CODE END I2C1_MspDeInit 1 */
+  }
+}
+
+/* USER CODE BEGIN 1 */
+
+void go2Boot(void)
+{
+	printf("BOOTLOADER Start\r\n");
+	//Check if there is something "installed" in the app FLASH region
+	if (((*(uint32_t*) FLASH_BOOT) & 0x200C0000) == 0x200C0000)   //0x2FFE000  ... == 0x20000000
+	{
+		printf("APP Start...\r\n");
+		osDelay(100);
+		/* Unlock the FLASH control register access */
+		HAL_FLASH_Unlock();
+		/* Unlocks the option bytes block access */
+		HAL_FLASH_OB_Unlock();
+		FLASH->NSBOOTADD1R = 0x08000000;
+		SET_BIT(FLASH->NSCR, FLASH_NSCR_OPTSTRT);
+		/* Launch the option byte loading */
+		HAL_FLASH_OB_Launch();
+		/* Locks the option bytes block access */
+		HAL_FLASH_OB_Lock();
+		/* Lock the FLASH control register access */
+		HAL_FLASH_Lock();
+	}
+	else
+	{
+		//there is no application installed
+		printf("No APP found!!!\r\n");
+	}
+}
+
+
+void read_flash(uint8_t* data)
+{
+	volatile uint32_t read_data;
+	volatile uint32_t read_cnt=0;
+	do
+	{
+		read_data = *(uint32_t*)(FLASH_STORAGE + read_cnt);
+		if(read_data != 0xFFFFFFFF)
+		{
+			data[read_cnt] = (uint8_t)read_data;
+			data[read_cnt + 1] = (uint8_t)(read_data >> 8);
+			data[read_cnt + 2] = (uint8_t)(read_data >> 16);
+			data[read_cnt + 3] = (uint8_t)(read_data >> 24);
+			read_cnt += 4;
+		}
+	}while(read_data != 0xFFFFFFFF);
+}
+
+/**
+ * @brief This function will only be called when the size of data is 132 bytes "RxSIZE"
+ *
+ */
+void process_data(void)
+{
+	//rxcount is the number of bytes received
+	//RxData is the buffer holding all the data received
+}
+
+/**
+ * @brief
+ *
+ * @param hi2c
+ */
+void HAL_I2C_ListenCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	HAL_I2C_EnableListen_IT(hi2c);
+}
+
+/**
+ * @brief
+ * This function is primary called at the beginning of the i2c slave reception with the correct slave address.
+ * It will check whether the direction of the i2c slave is a read or a write command and receives the first frame.
+ * @param hi2c
+ * @param TransferDirection
+ * @param AddrMatchCode
+ */
+void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c, uint8_t TransferDirection, uint16_t AddrMatchCode)
+{
+	if (TransferDirection == I2C_DIRECTION_TRANSMIT)
+	{
+		rxcount = 0;
+		HAL_I2C_Slave_Seq_Receive_IT(hi2c, RxData, 1, I2C_FIRST_FRAME);
+	}
+	else
+	{
+		txcount = 0;
+//		dataReg = checkout_reg(DEV_QSFP, current_bank, current_page, current_register);
+		HAL_I2C_Slave_Seq_Transmit_IT(hi2c, &dataReg, 1, I2C_FIRST_FRAME);
+		current_register++;
+	}
+}
+
+/**
+ * @brief
+ * The Tx callback function is called once the slave is sending data to the master.
+ * @param hi2c
+ */
+void HAL_I2C_SlaveTxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	txcount++;
+//	dataReg = checkout_reg(DEV_QSFP, current_bank, current_page, current_register);
+	HAL_I2C_Slave_Seq_Transmit_IT(hi2c, &dataReg, 1, I2C_NEXT_FRAME);
+	current_register++;
+}
+
+/**
+ * @brief
+ * The Rx callback function handles each byte received on the i2c1 slave bus from the master
+ * @param hi2c
+ */
+void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
+{
+	uint16_t code = 0;
+	if (rxcount == 1)
+	{
+		code = (RxData[1] << 8) | RxData[0];
+	}
+
+	if (code == 0xABCD)
+	{
+		go2APP();
+	}
+	else
+	{
+	    rxcount++;
+		if ((rxcount == RxSIZE-1) || (rxcount == 1 && !chunck_size_flag))
+		{
+			HAL_I2C_Slave_Seq_Receive_IT(hi2c, RxData+rxcount, 1, I2C_LAST_FRAME);
+		}
+		else
+		{
+			HAL_I2C_Slave_Seq_Receive_IT(hi2c, RxData+rxcount, 1, I2C_NEXT_FRAME);
+		}
+	}
+
+}
+/**
+ * @brief
+ * The error callback function is executed each time the max size of reception is not reached and enable again the listening function of the i2c slave.
+ * @param hi2c
+ */
+void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
+{
+	uint32_t errorcode = HAL_I2C_GetError(hi2c);
+	if (errorcode == 4) //AF error
+	{
+		__HAL_I2C_CLEAR_FLAG(hi2c, I2C_FLAG_AF); //clear AF Flag
+
+		if (txcount == 0) //error is while slave is receiving
+		{
+			process_data(); /*Is this needed?*/
+		}
+		else //error while slave is transmitting
+		{
+			txcount = txcount-1;
+		}
+	}
+	HAL_I2C_EnableListen_IT(hi2c);
+}
+
+/* USER CODE END 1 */
