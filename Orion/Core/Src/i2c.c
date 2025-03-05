@@ -27,9 +27,6 @@ uint8_t rxcount = 0;
 uint8_t txcount = 0, dataReg = 0;
 uint8_t incoming;
 uint8_t current_bank= 0xFF, current_page = 0xFF, current_register = 0xFF;
-uint16_t chunck_counter = 0;
-uint16_t chunck_size = 0;
-uint8_t chunck_size_flag = 0;
 
 #define FLASH_BOOT 	  0x8000000
 #define FLASH_REAL 	  0x8010000
@@ -289,7 +286,7 @@ void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
 	else
 	{
 	    rxcount++;
-		if ((rxcount == RxSIZE-1) || (rxcount == 1 && !chunck_size_flag))
+		if ((rxcount == RxSIZE-1) || rxcount == 1)
 		{
 			HAL_I2C_Slave_Seq_Receive_IT(hi2c, RxData+rxcount, 1, I2C_LAST_FRAME);
 		}
@@ -298,7 +295,6 @@ void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
 			HAL_I2C_Slave_Seq_Receive_IT(hi2c, RxData+rxcount, 1, I2C_NEXT_FRAME);
 		}
 	}
-
 }
 /**
  * @brief

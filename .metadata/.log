@@ -526,3 +526,371 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2025-03-03 11:49:51.731
 !MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/updatesite1.
+!SESSION 2025-03-04 11:19:37.924 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-03-04 11:20:48.821
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-03-04 11:20:48.833
+!MESSAGE Log4j2 initialized with config file C:\workshop_bootloader\BootApp1App2\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:20:57.043
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:20:57.044
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-03-04 11:21:03.155
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.660
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.661
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.724
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.724
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.725
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.726
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.727
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.728
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.729
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.730
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.732
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.733
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.734
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.734
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.738
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:12.739
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.360
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.361
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.363
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.364
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.365
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.366
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.368
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.369
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.370
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.371
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.372
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.373
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.374
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:21:15.375
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2025-03-04 11:21:38.264
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2025-03-04 11:21:38.702
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/updatesite1.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-03-04 11:26:25.469
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@7f4816a7): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-03-04 11:26:25.469
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:27:51.893
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:27:51.894
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:27:51.897
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 2 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:27:51.898
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:30:27.758
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 3 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:30:27.759
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:30:27.762
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 3 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 11:30:27.763
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-03-04 11:37:24.382
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@3f9d7196): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-03-04 11:37:24.382
+!MESSAGE Suspend operation timeout.
+!SESSION 2025-03-04 11:40:06.320 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-03-04 11:40:22.861
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-03-04 11:40:22.863
+!MESSAGE Log4j2 initialized with config file C:\workshop_bootloader\BootApp1App2\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:29.938
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:29.939
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-03-04 11:40:33.417
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.338
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.339
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.374
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.375
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.376
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.377
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.378
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.379
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.380
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.380
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.381
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.382
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.383
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.383
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.386
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:37.386
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.371
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.372
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.374
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.375
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.376
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.378
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.379
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.380
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.381
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.383
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.385
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.386
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.388
+!MESSAGE System property http.proxyHost is not set but should be 173.208.245.3.
+
+!ENTRY org.eclipse.core.net 1 0 2025-03-04 11:40:39.389
+!MESSAGE System property http.proxyPort is not set but should be 80.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2025-03-04 11:41:01.655
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2025-03-04 11:41:02.104
+!MESSAGE No repository found at https://sw-center.st.com/stm32cubeide/updatesite1.
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-03-04 11:59:02.334
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.debug.ui.actions.DsfSuspendCommand$4$1@309b1f7d): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Suspend operation timeout.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-03-04 11:59:02.334
+!MESSAGE Suspend operation timeout.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 12:14:25.079
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 6 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 12:14:25.080
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 12:14:25.083
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 6 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-04 12:14:25.084
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 11:18:41.581
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 11:18:41.582
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 11:18:41.584
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 7 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 11:18:41.585
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-03-05 11:38:53.033
+!MESSAGE Request for monitor: '86^error,msg="Unable to read memory."' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2025-03-05 11:38:53.034
+!MESSAGE Failed to execute MI command:
+-data-read-memory 0xe000ee08 d 1 1 4
+Error message from debugger back end:
+Unable to read memory.
+!STACK 0
+java.lang.Exception: Unable to read memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1024)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:853)
+
+!ENTRY org.eclipse.ui 4 0 2025-03-05 15:08:23.306
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4918)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:450)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:369)
+	at org.eclipse.swt.widgets.Control.isVisible(Control.java:1999)
+	at org.eclipse.cdt.debug.ui.memory.traditional.RenderingAddressInfo$1.lambda$0(RenderingAddressInfo.java:263)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:609)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:405)
+	at org.eclipse.jface.dialogs.MessageDialog.openError(MessageDialog.java:491)
+	at org.eclipse.debug.internal.ui.commands.actions.ExecuteActionRequest.lambda$0(ExecuteActionRequest.java:46)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 15:55:39.237
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 32 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 15:55:39.238
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 15:55:39.241
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 32 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2025-03-05 15:55:39.242
+!MESSAGE Existing sessions are:

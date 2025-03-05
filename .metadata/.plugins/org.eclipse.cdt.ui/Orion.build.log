@@ -1,23 +1,10 @@
-11:50:00 **** Incremental Build of configuration Debug for project Orion ****
+15:57:12 **** Incremental Build of configuration Debug for project Orion ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/app_freertos.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32U575xx -c -I../Core/Inc -I../Drivers/STM32U5xx_HAL_Driver/Inc -I../Drivers/STM32U5xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32U5xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include/ -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM33_NTZ/non_secure/ -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/ -I../Middlewares/Third_Party/CMSIS/RTOS2/Include/ -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app_freertos.d" -MT"Core/Src/app_freertos.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/app_freertos.o"
-arm-none-eabi-gcc -o "Orion.elf" @"objects.list"   -mcpu=cortex-m33 -T"C:\workshop_bootloader\BootApp1App2\Orion\STM32U575ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="Orion.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Orion.elf
- 
 arm-none-eabi-size  Orion.elf 
-arm-none-eabi-objdump -h -S Orion.elf  > "Orion.list"
    text	   data	    bss	    dec	    hex	filename
-  57900	    116	  14676	  72692	  11bf4	Orion.elf
-arm-none-eabi-objcopy  -O ihex Orion.elf  "Orion.hex"
+  57884	    116	  14676	  72676	  11be4	Orion.elf
 Finished building: default.size.stdout
-arm-none-eabi-objcopy  -O binary Orion.elf  "Orion.bin"
- 
-Finished building: Orion.hex
- 
-Finished building: Orion.bin
- 
-Finished building: Orion.list
  
 
-11:50:03 Build Finished. 0 errors, 0 warnings. (took 3s.318ms)
+15:57:13 Build Finished. 0 errors, 0 warnings. (took 787ms)
 

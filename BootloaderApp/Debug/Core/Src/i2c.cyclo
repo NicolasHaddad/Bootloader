@@ -7,5 +7,5 @@
 ../Core/Src/i2c.c:231:6:HAL_I2C_ListenCpltCallback	1
 ../Core/Src/i2c.c:244:6:HAL_I2C_AddrCallback	2
 ../Core/Src/i2c.c:265:6:HAL_I2C_SlaveTxCpltCallback	1
-../Core/Src/i2c.c:278:6:HAL_I2C_SlaveRxCpltCallback	16
-../Core/Src/i2c.c:399:6:HAL_I2C_ErrorCallback	3
+../Core/Src/i2c.c:278:6:HAL_I2C_SlaveRxCpltCallback	17
+../Core/Src/i2c.c:398:6:HAL_I2C_ErrorCallback	3
